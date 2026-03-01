@@ -1,4 +1,4 @@
-import Main/Mechanics/problem1.py
+import problem1
 import problem2
 import problem3
 import problem4
@@ -7,47 +7,9 @@ import problem6
 import problem7
 import problem8
 import problem9
-def clear_screen():
-    print("\n" * 20)
-
-def safe_float_input(prompt, positive=False, zero_allowed=False):
-    while True:
-        try:
-            val = float(input(prompt))
-            if positive and val <= 0:
-                print("Value must be positive.")
-                continue
-            if not zero_allowed and val == 0:
-                print("Zero is not allowed.")
-                continue
-            return val
-        except ValueError:
-            print("Invalid number, try again.")
-
-def prompt_show_solution():
-    while True:
-        ans = input("Show detailed solution? (Y/N): ").strip().lower()
-        if ans in ('y','n'):
-            return ans == 'y'
-        print("Please enter Y or N.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import clearScreen
+import SafeFloat
+import ShowSolution
 
 def main():
     while True:

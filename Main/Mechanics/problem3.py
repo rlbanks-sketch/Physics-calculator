@@ -1,3 +1,4 @@
+import main
 import math
 def problem3_relative_velocity():
     clear_screen()

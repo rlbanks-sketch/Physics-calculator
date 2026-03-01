@@ -1,3 +1,4 @@
+import main
 import math
 def problem5_boat_speed_relative_to_ground():
     clear_screen()

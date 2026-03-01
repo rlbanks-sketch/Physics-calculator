@@ -1,3 +1,4 @@
+import main
 import math
 def problem8_cobra_venom_range():
     clear_screen()
