@@ -1,6 +1,8 @@
 
 import math
 from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 def problem6_baseball_roof():
     clear_screen()
     print("Baseball rolling off pitched roof\n")

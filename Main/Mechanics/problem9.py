@@ -1,6 +1,8 @@
 
 import math
 from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 def problem9_frog_jump():
     clear_screen()
     print("Calaveras County Jumping Frog Jubilee\n")

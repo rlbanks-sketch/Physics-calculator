@@ -1,6 +1,8 @@
 
 import math
 from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 def problem2_fire_hose_height():
     clear_screen()
     print("Fire Hose Height at Building\n")

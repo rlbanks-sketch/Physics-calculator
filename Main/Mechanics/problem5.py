@@ -1,6 +1,8 @@
 
 import math
 from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 def problem5_boat_speed_relative_to_ground():
     clear_screen()
     print("Boat speed relative to ground\n")

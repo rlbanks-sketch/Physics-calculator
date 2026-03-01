@@ -1,6 +1,8 @@
 
 import math
 from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 def problem7_pea_strike_ceiling():
     clear_screen()
     print("Pea projectile strike ceiling\n")

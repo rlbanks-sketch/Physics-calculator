@@ -1,6 +1,8 @@
 
 import math
 from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 def problem3_relative_velocity():
     clear_screen()
     print("Relative Velocity: Cruise vs Patrol\n")
