@@ -1,4 +1,4 @@
-import main
+
 import math
 def problem2_fire_hose_height():
     clear_screen()
