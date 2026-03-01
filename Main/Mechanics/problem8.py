@@ -25,13 +25,13 @@ def problem8_cobra_venom_range():
     a = 0.5 * g
     b = -viy
     c = -h_launch
-    disc = b*b - 4*a*c
+    disc = b*2 - 4*a*c
     if disc < 0:
         print("No real solution for time of flight.")
         return
     sqrt_disc = math.sqrt(disc)
-    t1 = (b + sqrt_disc) / (2*a)
-    t2 = (b - sqrt_disc) / (2*a)
+    t1 = (-b + sqrt_disc) / (2*a)
+    t2 = (-b - sqrt_disc) / (2*a)
     times = [t for t in [t1,t2] if t > 0]
     if not times:
         print("No positive time solution.")

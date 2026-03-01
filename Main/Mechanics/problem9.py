@@ -41,3 +41,4 @@ def problem9_frog_jump():
         print("3) Time of flight:")
         print("   t = 2 * v * sin(θ) / g")
         print("     = 2 * {:.3f} * sin({:.3f} rad) / {:.3f} = {:.3f} s".format(v_launch, theta, g, t_flight))
+
