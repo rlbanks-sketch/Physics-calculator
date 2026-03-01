@@ -1,4 +1,4 @@
-from pcal import main
+from mechanics import main
 import math
 def problem1_launch_below_horizontal():
     clear_screen()
