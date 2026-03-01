@@ -1,4 +1,4 @@
-import main
+
 import math
 def problem4_free_fall():
     clear_screen()

@@ -1,4 +1,4 @@
-import main
+
 import math
 def problem9_frog_jump():
     clear_screen()

@@ -1,4 +1,3 @@
-import mechanics
 import math
 def problem1_launch_below_horizontal():
     clear_screen()

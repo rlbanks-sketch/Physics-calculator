@@ -1,4 +1,4 @@
-import main
+
 def safe_float_input(prompt, positive=False, zero_allowed=False):
     while True:
         try:

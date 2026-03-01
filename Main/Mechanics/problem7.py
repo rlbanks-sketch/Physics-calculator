@@ -1,4 +1,4 @@
-import main
+
 import math
 def problem7_pea_strike_ceiling():
     clear_screen()

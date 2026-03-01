@@ -1,4 +1,3 @@
-import main
 def prompt_show_solution():
     while True:
         ans = input("Show detailed solution? (Y/N): ").strip().lower()

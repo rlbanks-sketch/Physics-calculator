@@ -1,15 +1,15 @@
 from problem1 import problem1_launch_below_horizontal
-import problem2
-import problem3
-import problem4
-import problem5
-import problem6
-import problem7
-import problem8
-import problem9
-import clearScreen
-import SafeFloat
-import ShowSolution
+from problem2 import problem2_fire_hose_height
+from problem3 import problem3_relative_velocity
+from problem4 import problem4_free_fall
+from problem5 import problem5_boat_speed_relative_to_ground
+from problem6 import problem6_baseball_roof
+from problem7 import problem7_pea_strike_ceiling
+from problem8 import problem8_cobra_venom_range
+from problem9 import problem9_frog_jump
+from clearScreen import clear_screen
+from SafeFloat import safe_float_input
+from ShowSolution import prompt_show_solution
 
 def main():
     while True:
