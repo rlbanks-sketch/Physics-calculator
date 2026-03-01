@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem7_pea_strike_ceiling():
     clear_screen()
     print("Pea projectile strike ceiling\n")

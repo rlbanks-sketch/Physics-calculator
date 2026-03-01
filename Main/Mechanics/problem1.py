@@ -1,4 +1,5 @@
 import math
+from clearScreen import clear_screen
 def problem1_launch_below_horizontal():
     clear_screen()
     print("Launch Below Horizontal\n")

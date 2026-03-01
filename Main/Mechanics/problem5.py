@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem5_boat_speed_relative_to_ground():
     clear_screen()
     print("Boat speed relative to ground\n")

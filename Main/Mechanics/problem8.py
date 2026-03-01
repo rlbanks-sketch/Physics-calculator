@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem8_cobra_venom_range():
     clear_screen()
     print("Spitting Cobra Venom Range\n")

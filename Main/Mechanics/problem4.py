@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem4_free_fall():
     clear_screen()
     print("Simple Free Fall\n")

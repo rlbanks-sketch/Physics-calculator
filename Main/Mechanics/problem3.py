@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem3_relative_velocity():
     clear_screen()
     print("Relative Velocity: Cruise vs Patrol\n")

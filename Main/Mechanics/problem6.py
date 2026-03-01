@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem6_baseball_roof():
     clear_screen()
     print("Baseball rolling off pitched roof\n")

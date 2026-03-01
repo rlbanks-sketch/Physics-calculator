@@ -1,5 +1,6 @@
 
 import math
+from clearScreen import clear_screen
 def problem2_fire_hose_height():
     clear_screen()
     print("Fire Hose Height at Building\n")
