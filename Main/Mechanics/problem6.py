@@ -15,26 +15,29 @@ def problem6_baseball_roof():
     y_roof = safe_float_input("Roof edge height (m): ", positive=True)
 
     g = 9.8
-    theta = math.radians(angle_deg)
+theta = math.radians(angle_deg)
 
-    # Velocity components (angle below horizontal, vertical component negative/downward)
-    vix = v_rollerspeed * math.cos(theta)
-    viy = - v_rollerspeed * math.sin(theta)  # downward is negative
+# Velocity components (angle below horizontal, vertical component negative/downward)
+vix = v_rollerspeed * math.cos(theta)
+viy = - v_rollerspeed * math.sin(theta)  # downward is negative
 
-    # Solve for time until ball hits ground y=0:
-    # 0 = y_roof + viy * t - 0.5 * g * t^2
-    a = 0.5 * g
-    b = viy
-    c = y_roof
+# Solve for time until ball hits ground y=0:
+# 0 = y_roof + viy * t - 0.5 * g * t^2
+# => 0.5 * g * t^2 - viy * t - y_roof = 0
+a = 0.5 * g
+b = -viy     # <-- changed sign
+c = -y_roof  # <-- changed sign
 
-    disc = b**2 - 4*a*c
-    if disc < 0:
-        print("No real solution for time in air.")
-        return
-    sqrt_disc = math.sqrt(disc)
-    t1 = (-b + sqrt_disc) / (2*a)
-    t2 = (-b - sqrt_disc) / (2*a)
-    times = [t for t in [t1, t2] if t > 0]
+disc = b**2 - 4*a*c
+if disc < 0:
+    print("No real solution for time in air.")
+    return
+
+sqrt_disc = math.sqrt(disc)
+t1 = (-b + sqrt_disc) / (2*a)
+t2 = (-b - sqrt_disc) / (2*a)
+
+times = [t for t in [t1, t2] if t > 0]
     if not times:
         print("No positive time solution.")
         return
