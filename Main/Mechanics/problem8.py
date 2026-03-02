@@ -25,7 +25,7 @@ def problem8_cobra_venom_range():
     a = 0.5 * g
     b = -viy
     c = -h_launch
-    disc = b*2 - 4*a*c
+    disc = b**2 - 4*a*c
     if disc < 0:
         print("No real solution for time of flight.")
         return
