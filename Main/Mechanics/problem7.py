@@ -24,7 +24,7 @@ def problem7_pea_strike_ceiling():
     a = 0.5 * g
     b = viy
     c = -h_ceiling
-    disc = b** - 4*a*c
+    disc = b**2 - 4*a*c
 
     if disc < 0:
         print("Projectile never reaches the ceiling height.")
