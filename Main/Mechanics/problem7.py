@@ -21,7 +21,7 @@ def problem7_pea_strike_ceiling():
 
     # Equation y(t) = viy * t - 0.5*g*t^2 = h_ceiling
     # Rearrange: 0.5*g*t^2 - viy * t + h_ceiling = 0
-    a = 0.5 * g
+    a = -0.5 * g
     b = viy
     c = -h_ceiling
     disc = b**2 - 4*a*c
