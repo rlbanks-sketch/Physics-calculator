@@ -45,7 +45,6 @@ def problem6_baseball_roof():
     print("\nResults:")
     print("Time in air: {:.3f} s".format(t_air))
     print("Horizontal distance from roof edge: {:.3f} m".format(x))
-    print("Horizontal distance from roof edge: {:.3f} m".format(x))
 
     if prompt_show_solution():
         print("\nDetailed Solution:")
