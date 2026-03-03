@@ -13,7 +13,7 @@ def problem7_pea_strike_ceiling():
         return
     h_ceiling = safe_float_input("Ceiling height above table (m): ", positive=True)
 
-    g = 9.8
+    g = -9.8
     theta = math.radians(angle_deg)
     vix = v0 * math.cos(theta)
     viy = v0 * math.sin(theta)
