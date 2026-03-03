@@ -6,7 +6,6 @@ from ShowSolution import prompt_show_solution
 def problem7_pea_strike_ceiling():
     clear_screen()
     print("Pea projectile strike ceiling\n")
-
     v0 = safe_float_input("Launch speed (m/s): ", positive=True)
     angle_deg = safe_float_input("Launch angle (deg above horiz): ")
     if angle_deg < 0 or angle_deg > 90:
@@ -38,10 +37,15 @@ def problem7_pea_strike_ceiling():
         return
     t_hit = min(times)
 
-    # Calculate vertical and horizontal velocities at impact:
-    vix_impact = vix  # horizontal velocity constant
-    viy_impact = viy - g * t_hit
-    v_impact = math.sqrt(vix_impact**2 + viy_impact**2)
+    # Horizontal velocity (constant)
+    vx = vix  # constant, no acceleration
+
+    # Vertical velocity at impact using kinematics: vy^2 = v0y^2 - 2*g*Δy
+    # Δy is the vertical displacement from launch to hit height = h_ceiling
+    vy = math.sqrt(viy**2 - 2 * g * h_ceiling)
+
+    # Calculate total speed at impact
+    v_impact = math.sqrt(vx**2 + vy**2)
 
     print("\nResults:")
     print("Time to reach ceiling: {:.3f} s".format(t_hit))
