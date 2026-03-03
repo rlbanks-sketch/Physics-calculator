@@ -24,13 +24,13 @@ def problem7_pea_strike_ceiling():
     a = 0.5 * g
     b = viy
     c = -h_ceiling
-    disc = b**2 - 4*a*c
+    disc = b** - 4*a*c
 
     if disc < 0:
         print("Projectile never reaches the ceiling height.")
         return
     sqrt_disc = math.sqrt(disc)
-    t1 = (b + sqrt_disc) / (2*a)
+    t1 = (-b + sqrt_disc) / (2*a)
     t2 = (b - sqrt_disc) / (2*a)
     times = [t for t in [t1, t2] if t > 0]
     if not times:
