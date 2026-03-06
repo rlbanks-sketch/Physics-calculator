@@ -1,3 +1,4 @@
+from Main.Mechanics.problem10 import calculate_relative_velocity
 from problem1 import problem1_launch_below_horizontal
 from problem2 import problem2_fire_hose_height
 from problem3 import problem3_relative_velocity
@@ -23,6 +24,7 @@ def main():
         print("7. Pea projectile")
         print("8. Spitting cobra")
         print("9. frog jump")
+        print("10. Relative velocity (cruise ship and patrol boat)")
         print("0. Exit")
         choice = input("Select (0-9): ").strip()
         if choice == '1':
@@ -43,9 +45,10 @@ def main():
             problem8_cobra_venom_range()
         elif choice == '9':
             problem9_frog_jump()
+        elif choice == '10':
+            calculate_relative_velocity()
         elif choice == '0':
             print("Stay Golden")
-            break
         else:
             print("Try again nigga.")
 
