@@ -8,6 +8,7 @@ from problem6 import problem6_baseball_roof
 from problem7 import problem7_pea_strike_ceiling
 from problem8 import problem8_cobra_venom_range
 from problem9 import problem9_frog_jump
+from problem10 import calculate_relative_velocity
 from clearScreen import clear_screen
 
 
