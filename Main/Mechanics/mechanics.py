@@ -1,4 +1,4 @@
-from Main.Mechanics.problem10 import calculate_relative_velocity
+import math
 from problem1 import problem1_launch_below_horizontal
 from problem2 import problem2_fire_hose_height
 from problem3 import problem3_relative_velocity
