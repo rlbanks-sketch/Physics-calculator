@@ -62,6 +62,6 @@ def problem7_pea_strike_ceiling():
         print("   Discriminant = {:.3f}".format(disc))
         print("3) Positive solution for t: {:.3f} s".format(t_hit))
         print("4) Velocity components at impact:")
-        print("   vix = {:.3f} m/s (constant)".format(vix_impact))
-        print("   viy = {:.3f} - {:.3f} * {:.3f} = {:.3f} m/s".format(viy, g, t_hit, viy_impact))
+        print("   vix = {:.3f} m/s (constant)".format(v_impact))
+        print("   viy = {:.3f} - {:.3f} * {:.3f} = {:.3f} m/s".format(viy, g, t_hit, v_impact))
         print("5) Impact speed = sqrt(vix² + viy²) = {:.3f} m/s".format(v_impact))
