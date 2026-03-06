@@ -3,53 +3,74 @@ import math
 from clearScreen import clear_screen
 from SafeFloat import safe_float_input
 from ShowSolution import prompt_show_solution
+def safe_float_input(prompt, positive=False):
+    while True:
+        try:
+            val = float(input(prompt))
+            if positive and val <= 0:
+                print("Value must be positive.")
+                continue
+            return val
+        except ValueError:
+            print("Invalid input, please enter a number.")
+
 def problem7_pea_strike_ceiling():
-    clear_screen()
     print("Pea projectile strike ceiling\n")
+
     v0 = safe_float_input("Launch speed (m/s): ", positive=True)
     angle_deg = safe_float_input("Launch angle (deg above horiz): ")
     if angle_deg < 0 or angle_deg > 90:
-        print("Angle must be 0 to 90.")
+        print("Angle must be between 0 and 90 degrees.")
         return
     h_ceiling = safe_float_input("Ceiling height above table (m): ", positive=True)
 
-    g = -9.8
+    g = 9.8  # acceleration due to gravity (positive scalar for downward acceleration)
     theta = math.radians(angle_deg)
+
+    # Initial velocity components
     vix = v0 * math.cos(theta)
     viy = v0 * math.sin(theta)
 
-    # Equation y(t) = viy * t - 0.5*g*t^2 = h_ceiling
-    # Rearrange: 0.5*g*t^2 - viy * t + h_ceiling = 0
-    a = -0.5 * g
-    b = viy
-    c = -h_ceiling
-    disc = b**2 - 4*a*c
+    # The vertical position as a function of time:
+    # y(t) = viy * t - 0.5 * g * t^2
+    # We want to find time t when y(t) = h_ceiling
+    # => 0.5*g*t^2 - viy * t + h_ceiling = 0
+    a = 0.5 * g
+    b = -viy
+    c = h_ceiling
 
-    if disc < 0:
+    discriminant = b**2 - 4 * a * c
+
+    if discriminant < 0:
         print("Projectile never reaches the ceiling height.")
         return
-    sqrt_disc = math.sqrt(disc)
-    t1 = (-b + sqrt_disc) / (2*a)
-    t2 = (-b - sqrt_disc) / (2*a)
+
+    sqrt_discriminant = math.sqrt(discriminant)
+    t1 = (-b + sqrt_discriminant) / (2 * a)
+    t2 = (-b - sqrt_discriminant) / (2 * a)
+
+    # We consider only positive times
     times = [t for t in [t1, t2] if t > 0]
+
     if not times:
-        print("Projectile never reaches ceiling height on upward or downward path.")
+        print("Projectile never reaches the ceiling height at positive time.")
         return
+
     t_hit = min(times)
 
-    # Horizontal velocity (constant)
-    vx = vix  # constant, no acceleration
+    # Vertical velocity at impact:
+    # vy(t) = viy - g * t
+    vy_impact = viy - g * t_hit
 
-    # Vertical velocity at impact using kinematics: vy^2 = v0y^2 - 2*g*Δy
-    # Δy is the vertical displacement from launch to hit height = h_ceiling
-    vy = math.sqrt(viy**2 - 2 * g * h_ceiling)
+    # Horizontal velocity stays constant
+    vx_impact = vix
 
-    # Calculate total speed at impact
-    v_impact = math.sqrt(vx**2 + vy**2)
+    # Resultant speed on striking ceiling:
+    v_impact = math.sqrt(vx_impact**2 + vy_impact**2)
 
     print("\nResults:")
-    print("Time to reach ceiling: {:.3f} s".format(t_hit))
-    print("Speed on striking ceiling: {:.3f} m/s".format(v_impact))
+    print(f"Time to reach ceiling: {t_hit:.3f} s")
+    print(f"Speed on striking ceiling: {v_impact:.3f} m/s")
 
     if prompt_show_solution():
         print("\nDetailed Solution:")
